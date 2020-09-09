@@ -1,4 +1,4 @@
-define(['pipAPI', 'https://github.com/tcobrie/belief_implicit/blob/belief/belief.js'], function(APIConstructor, ampExtension){
+define(['pipAPI', 'https://github.com/tcobrie/belief_implicit/belief/belief.js'], function(APIConstructor, ampExtension){
 
 	var API = new APIConstructor();
 	
