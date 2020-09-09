@@ -19,17 +19,16 @@ define(['pipAPI', 'https://github.com/tcobrie/belief_implicit/belief/belief.js']
 
 			}, 
 			{
-				nameForFeedback : 'Does not Describe Article',  //Will be used in the user feedback 
-				nameForLogging : 'Non-belief', //Will be used in the logging
-				//An array of all media objects for this category.
-				mediaArray : [
-				    {word: 'False'}, 
-					{word: 'Fake'}, 
-					{word: 'Wrong'}, 
-					{word: 'Hoax'}, 
-					{word: 'Made-up'}, 
-					{word: 'Lie'}]
-			}
+		examplePrimeStimulus : 
+		{
+			nameForLogging : 'examplePrime', //Will be used in the logging
+			//An array of all media objects for this category.
+			mediaArray : [{image : 'ampchair.jpg'}, {image : 'amplamp.jpg'}, {image : 'ampumbrella.jpg'}]
+		},
+
+		base_url : {//Where are your images at?
+			image : 'https://baranan.github.io/minno-tasks/images/ampImages'
+		}
 		],
 
 	});
