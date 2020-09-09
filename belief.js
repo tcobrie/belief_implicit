@@ -19,7 +19,7 @@ define(['pipAPI', 'https://github.com/tcobrie/belief_implicit/blob/belief/belief
 
 			}, 
 			{
-				nameForFeedback : 'Describes Article',  //Will be used in the user feedback 
+				nameForFeedback : 'Does not Describe Article',  //Will be used in the user feedback 
 				nameForLogging : 'Non-belief', //Will be used in the logging
 				//An array of all media objects for this category.
 				mediaArray : [
