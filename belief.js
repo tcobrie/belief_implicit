@@ -1,44 +1,38 @@
 define(['pipAPI', 'https://github.com/tcobrie/belief_implicit/blob/belief/belief.js'], function(APIConstructor, ampExtension){
 
 	var API = new APIConstructor();
+	
+	
+	return ampExtension({
+		primeCats :  [
+			{
+				nameForFeedback : 'Describes Article',  //Will be used in the user feedback 
+				nameForLogging : 'Belief', //Will be used in the logging
+				//An array of all media objects for this category.
+				mediaArray : [
+				    {word: 'Credible'}, 
+					{word: 'Plausible'}, 
+					{word: 'Believable'}, 
+					{word: 'Probably True'}, 
+					{word: 'Convincing'}, 
+					{word: 'Meaningful'}]
 
+			}, 
+			{
+				nameForFeedback : 'Describes Article',  //Will be used in the user feedback 
+				nameForLogging : 'Non-belief', //Will be used in the logging
+				//An array of all media objects for this category.
+				mediaArray : [
+				    {word: 'False'}, 
+					{word: 'Fake'}, 
+					{word: 'Wrong'}, 
+					{word: 'Hoax'}, 
+					{word: 'Made-up'}, 
+					{word: 'Lie'}]
+			}
+		],
 
-return iatExtension({
-	category1 : {
-		name : 'Describes Article', //Will appear in the data.
-		title : {
-			media : {word : 'Describes Article'}, //Name of the category presented in the task.
-			css : {color:'#31940F','font-size':'2em'}, //Style of the category title.
-			height : 4 //Used to position the "Or" in the combined block.
-		}, 
-		stimulusMedia : [ //Stimuli content as PIP's media objects
-		    {word : 'Meaningful'}, 
-			{word : 'Convincing'}, 
-			{word : 'Plausible'}, 
-			{word : 'Believable'}, 
-			{word : 'True'}, 
-			{word : 'Credible'}
-		], 
-		//Stimulus css (style)
-		stimulusCss : {color:'#31940F','font-size':'1.8em'}
-	},	
-	category2 :	{
-		name : 'Does Not Describe Article', //Will appear in the data.
-		title : {
-			media : {word : 'Does not Describe Article'}, //Name of the category presented in the task.
-			css : {color:'#31940F','font-size':'2em'}, //Style of the category title.
-			height : 4 //Used to position the "Or" in the combined block.
-		}, 
-		stimulusMedia : [ //Stimuli content as PIP's media objects
-		        {word : 'Wrong'}, 
-			{word : 'False'}, 
-			{word : 'Lie'}, 
-			{word : 'Fiction'}, 
-			{word : 'Made-up'}, 
-			{word : 'Fake'}			], 
-		//Stimulus css
-		stimulusCss : {color:'#31940F','font-size':'1.8em'}
-	}
-
-	}); 
+	});
 });
+
+
